@@ -1,13 +1,15 @@
 This is a definition of the ruleset that will be implemented in supernamer. Subject to change.
 
---custom=PYTHONCODE                     Accepts a string of python code to run as a ruleset. Still working on what limitations there will be
---keep=INTEGER                          Keep keeps only that many characters from either the beginning or end of the filename. Negative numbers indicate keeping that many characters starting at the end of the filename. (Acts as [INTEGER:] in python)
---replace=STRING1,STRING2               Replace will search for the first string in each file and replace that string with the new one
---slice=START,END                       Slice accepts one or two integers, representing start and stop values for a python slice. If only one integer is given, it will be the stop value (Opposite of --keep). It will slice out the given substring. e.g. --slice=1,2 (gives the character between position 1 and position 2)*
---rulestring=RULESTRING                 Allows for adding multiple rules at once. A rulestring is an array of rules, with each rule being an array containing the rule. e.g. --rulestring="[[-12],["hello","world"],[1,2]]" will keep last 12 characters, then rename instances of hello with world, and finally grab the character between positions 1 and 2.
+--custom=PYTHONCODE                     WIP. Accepts a string of python code to run as a ruleset. Still working on what limitations there will be
+--discard=INTEGER                       Discards X characters from either the beginning or end of the filename. Negative numbers indicate discarding X characters from the end of the filename. First character is index 0. (Equivalent of "[:INTEGER]" in python)
+--keep=INTEGER                          Keeps X characters from either the beginning or end of the filename. Negative numbers indicate keeping X characters starting at the end of the filename. First character is index 0. (Equivalent of "[INTEGER:]" in python)
+--replace=STRING1,STRING2               Replaces instances of first string with second string in a filename
+--slice=START,END                       Slices between two integers, representing start and stop values for a python slice. First character is index 0.
 
+Definitiions:
+
+INTEGER                                 An integer
 STRING                                  A normal string, but can contain special rules as listed below
+
+Special Rules
 ##                                      Indicates a single digit number (0-9). Can be used in sequence, e.g. #### can represent numbers from 00 - 99. This rule will copy those digits over to the renamed file
-
-
-* another example with only one integer given: --slice=-8 (Acts as [:-8], which removes 8 characters from the end of the filename)
