@@ -3,7 +3,7 @@ supernamer
 
 Command-line utitlity for renaming files by rulesets
 
-SuperNamer has now hit release 0.1! Currently, it can detect whether you are giving it directories or files and automatically expand directories into their composite files. See known issues and in progress for more information.
+SuperNamer has now hit release 0.1, download here: [http://superlinkx.github.io/supernamer/downloads/v0.1/sn.py](http://superlinkx.github.io/supernamer/downloads/v0.1/sn.py) Currently, it can detect whether you are giving it directories or files and automatically expand directories into their composite files. See known issues and in progress for more information.
 
     usage: sn.py [-h] [--discard INTEGER] [--keep INTEGER]
                  [--replace STRING,STRING] [--slice START,STOP] [--version]
