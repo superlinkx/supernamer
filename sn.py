@@ -21,7 +21,7 @@ class SuperNamer:
 		parser.add_argument('--version', '-v', action='version', version=versionString)
 		parser.add_argument('--dryrun', '-D', action='store_true', default=False, help="Outputs filename changes, but doesn't touch the filesystem")
 		parser.add_argument('--nonverbose', '-N', action='store_true', default=False, help="Don't display verbose output")
-		parser.add_argument('files', nargs='+', help='Files to rename. Can be a single file, list of files (with spaces between), or a directory/directories (including .), but not mixed')
+		parser.add_argument('files', nargs='+', help='Files to rename. If only two filenames and no rules are given (not counting flags like -N and -D), the first file will get the second file\'s name. Can be a single file, list of files (with spaces between), or a directory/directories (including .), but not mixed')
 
 		#Get arguments
 		self.args = parser.parse_args()
