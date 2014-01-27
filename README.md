@@ -47,11 +47,13 @@ SuperNamer has now hit release 0.1! Currently, it can detect whether you are giv
 
 
 Known Issues:
+-------------
 - Subdirectories will automatically be renamed along with files
 - If both files and directories are given as input, an error will be displayed. Proper error detection in progress.
 - Cannot use the special number rule yet. Still working on an implementation for that
 
 In Progress:
+------------
 - Special number rule implementation for replacing substrings and passing original numbers along (crucial for renaming tv shows for example)
 - Error detection system and proper exceptions
 - Code clean up
